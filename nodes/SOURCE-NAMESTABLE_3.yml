@@ -1,0 +1,51 @@
+fileVersion: 1
+id: d798f76e-6426-4f2c-af86-87fd8acf2f4b
+name: NAMESTABLE_3
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SOURCE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a556a8b1-98bb-4af7-b7c9-066e2ba58889
+          stepCounter: d798f76e-6426-4f2c-af86-87fd8acf2f4b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: NAMES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc0ed8b2-1069-4214-a998-406895930911
+                stepCounter: df14c547-7d1f-434f-89eb-ad6ef7358d9a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          NAMESTABLE: df14c547-7d1f-434f-89eb-ad6ef7358d9a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: NAMESTABLE
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'NAMESTABLE') }} "NAMESTABLE"
+        name: NAMESTABLE_3
+        noLinkRefs: []
+  name: NAMESTABLE_3
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
