@@ -1,0 +1,8 @@
+fileVersion: 1
+id: "20"
+mappingDefinitions:
+  SOURCE:
+    database: SAMPLE_DB
+    schema: SAMPLESCHEMA
+name: Job_Environment
+type: Environment

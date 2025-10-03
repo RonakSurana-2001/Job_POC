@@ -1,0 +1,35 @@
+fileVersion: 1
+id: df14c547-7d1f-434f-89eb-ad6ef7358d9a
+name: NAMESTABLE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc0ed8b2-1069-4214-a998-406895930911
+          stepCounter: df14c547-7d1f-434f-89eb-ad6ef7358d9a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAMES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: NAMESTABLE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

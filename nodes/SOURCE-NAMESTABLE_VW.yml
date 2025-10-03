@@ -1,0 +1,51 @@
+fileVersion: 1
+id: 21edb421-a365-4b02-9be8-1b6b89ffecba
+name: NAMESTABLE_VW
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SOURCE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 05506041-b752-4c70-b389-c8c4498f4f1a
+          stepCounter: 21edb421-a365-4b02-9be8-1b6b89ffecba
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: Names in Capitol
+        name: NAMES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc0ed8b2-1069-4214-a998-406895930911
+                stepCounter: df14c547-7d1f-434f-89eb-ad6ef7358d9a
+            transform: UPPER("NAMESTABLE"."NAMES")
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          NAMESTABLE: df14c547-7d1f-434f-89eb-ad6ef7358d9a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: NAMESTABLE
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'NAMESTABLE') }} "NAMESTABLE"
+        name: NAMESTABLE_VW
+        noLinkRefs: []
+  name: NAMESTABLE_VW
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
